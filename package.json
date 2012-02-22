@@ -1,5 +1,5 @@
 {
-    "name": "buster-hmtl-doc",
+    "name": "buster-html-doc",
     "version": "0.1.0",
     "description": "HTML doc feature (as found in JsTestDriver) as a Buster.JS extension",
     "homepage": "http://busterjs.org/docs/html-doc/",
@@ -13,15 +13,17 @@
         "email": "august.lilleaas@gmail.com",
         "url": "http://augustl.com"
     }],
-    "main": "./lib/html-doc",
+    "main": "./lib/extension",
     "repository": {
         "type": "git",
         "url": "git://gitorious.org/buster/buster-html-doc.git"
     },
     "dependencies": {
+        "zeparser": ">=0.0.5"
     },
     "devDependencies": {
         "buster": "*",
-        "jsdom": "~0.2.10"
+        "jsdom": "~0.2.10",
+        "buster-configuration": ">=0.3"
     }
 }
