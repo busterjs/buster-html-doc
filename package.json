@@ -1,0 +1,27 @@
+{
+    "name": "buster-hmtl-doc",
+    "version": "0.1.0",
+    "description": "HTML doc feature (as found in JsTestDriver) as a Buster.JS extension",
+    "homepage": "http://busterjs.org/docs/html-doc/",
+    "author": { "name": "August Lilleaas and Christian Johansen" },
+    "contributors": [{
+        "name": "Christian Johansen",
+        "email": "christian@cjohansen.no",
+        "url": "http://cjohansen.no"
+    }, {
+        "name": "August Lilleaas",
+        "email": "august.lilleaas@gmail.com",
+        "url": "http://augustl.com"
+    }],
+    "main": "./lib/html-doc",
+    "repository": {
+        "type": "git",
+        "url": "git://gitorious.org/buster/buster-html-doc.git"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+        "buster": "*",
+        "jsdom": "~0.2.10"
+    }
+}
