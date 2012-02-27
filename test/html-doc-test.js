@@ -90,5 +90,22 @@ buster.testCase("HTML doc", {
         assert.exception(function () {
             vm.runInNewContext(htmlDoc.extract(comment), this.context);
         });
+    },
+
+    "allows elements with attributes": function()
+    {
+        var comment = "/*:DOC += <div id=\"test\"></div> */";
+        vm.runInNewContext(htmlDoc.extract(comment), this.context);
+
+        assert.equals(this.context.document.body.firstChild.getAttribute('id'), 'test');
+    },
+
+    "allows plus and equals in the HTML": function()
+    {
+        var comment = "/*:DOC += <div data-test=\"test+=test\">+=+</div> */";
+        vm.runInNewContext(htmlDoc.extract(comment), this.context);
+
+        assert.equals(this.context.document.body.firstChild.getAttribute('data-test'), 'test+=test');
+        assert.equals(this.context.document.body.firstChild.textContent, '+=+');
     }
 });
