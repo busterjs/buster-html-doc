@@ -1,6 +1,6 @@
 {
     "name": "buster-html-doc",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "HTML doc feature (as found in JsTestDriver) as a Buster.JS extension",
     "homepage": "http://busterjs.org/docs/html-doc/",
     "author": { "name": "August Lilleaas and Christian Johansen" },
@@ -12,6 +12,9 @@
         "name": "August Lilleaas",
         "email": "august.lilleaas@gmail.com",
         "url": "http://augustl.com"
+    }, {
+        "name": "Dominykas Blyžė",
+        "url": "http://www.dominykas.com"
     }],
     "main": "./lib/extension",
     "repository": {
