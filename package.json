@@ -21,6 +21,9 @@
         "type": "git",
         "url": "git://gitorious.org/buster/buster-html-doc.git"
     },
+    "scripts": {
+        "test": "./node_modules/buster/bin/buster-test"
+    },
     "dependencies": {
         "zeparser": ">=0.0.5"
     },
