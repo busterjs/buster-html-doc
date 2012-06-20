@@ -1,6 +1,6 @@
 {
     "name": "buster-html-doc",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "HTML doc feature (as found in JsTestDriver) as a Buster.JS extension",
     "homepage": "http://busterjs.org/docs/html-doc/",
     "author": { "name": "August Lilleaas and Christian Johansen" },
@@ -30,6 +30,6 @@
     "devDependencies": {
         "buster": "*",
         "jsdom": "~0.2.14",
-        "buster-configuration": ">=0.4.1"
+        "buster-configuration": ">=0.5.0"
     }
 }
