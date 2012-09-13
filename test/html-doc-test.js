@@ -6,7 +6,8 @@ var jsdom = require("jsdom").jsdom;
 
 buster.testCase("HTML doc", {
     setUp: function () {
-        var dom = jsdom("<!DOCTYPE html><html><head></head><body></body></html>");
+        var dom = jsdom("<!DOCTYPE html><html><head></head>" +
+                        "<body></body></html>");
         this.context = { document: dom.createWindow().document };
     },
 
@@ -51,7 +52,8 @@ buster.testCase("HTML doc", {
     },
 
     "ignores superfluous white-space": function () {
-        var comment = "/*:DOC     element  \n    =  \n\n     <div></div>\n\n   */";
+        var comment = "/*:DOC     element  \n    =" +
+                "  \n\n     <div></div>\n\n   */";
         vm.runInNewContext(htmlDoc.extract(comment), this.context);
 
         assert.tagName(this.context.element, "div");
@@ -84,7 +86,7 @@ buster.testCase("HTML doc", {
         assert.equals(processed.split("\n").length, 4);
     },
 
-    "throws when attempting to add more than one element to the body": function () {
+    "throws when attempting to add more than one element": function () {
         var comment = "/*:DOC += <div></div><div></div>*/";
 
         assert.exception(function () {
@@ -96,15 +98,17 @@ buster.testCase("HTML doc", {
         var comment = "/*:DOC += <div id=\"test\"></div> */";
         vm.runInNewContext(htmlDoc.extract(comment), this.context);
 
-        assert.equals(this.context.document.body.firstChild.getAttribute("id"), "test");
+        var body = this.context.document.body;
+        assert.equals(body.firstChild.getAttribute("id"), "test");
     },
 
     "allows plus and equals in the HTML": function () {
         var comment = "/*:DOC += <div data-test=\"test+=test\">+=+</div> */";
         vm.runInNewContext(htmlDoc.extract(comment), this.context);
 
-        assert.equals(this.context.document.body.firstChild.getAttribute("data-test"), "test+=test");
-        assert.equals(this.context.document.body.firstChild.textContent, "+=+");
+        var body = this.context.document.body;
+        assert.equals(body.firstChild.getAttribute("data-test"), "test+=test");
+        assert.equals(body.firstChild.textContent, "+=+");
     },
 
     "allows single quoted attributes": function () {

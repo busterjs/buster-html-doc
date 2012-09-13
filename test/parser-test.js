@@ -13,7 +13,8 @@ buster.testCase("HTML doc parser", {
     },
 
     "extracts html docs and updates code": function () {
-        var code = parser.parse("function () { /*:DOC element = <div></div>*/ }");
+        var script = "function () { /*:DOC element = <div></div>*/ }";
+        var code = parser.parse(script);
         assert.match(code, "document.createElement");
     }
 });

@@ -1,6 +1,6 @@
 var buster = require("buster");
 var ext = require("../lib/extension");
-var config = require("buster-configuration");
+var bc = require("buster-configuration");
 
 function process(group, then, errBack) {
     group.resolve().then(function (resourceSet) {
@@ -10,7 +10,7 @@ function process(group, then, errBack) {
 
 buster.testCase("HTML doc extension", {
     setUp: function () {
-        this.config = config.create();
+        this.config = bc.createConfiguration();
     },
 
     "processes tests to extract html doc": function (done) {
@@ -30,4 +30,3 @@ buster.testCase("HTML doc extension", {
         }.bind(this)), buster.log);
     }
 });
-
