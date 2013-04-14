@@ -22,13 +22,13 @@
         "url": "https://github.com/busterjs/buster-html-doc.git"
     },
     "scripts": {
-        "test": "./node_modules/buster/bin/buster-test"
+        "test": "node run-tests.js"
     },
     "dependencies": {
         "zeparser": ">=0.0.5"
     },
     "devDependencies": {
-        "buster": "0.6.11",
+        "buster-node": "0.1",
         "jsdom": "~0.5.3",
         "buster-configuration": ">=0.6.0"
     }

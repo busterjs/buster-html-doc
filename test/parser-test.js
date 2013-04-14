@@ -1,4 +1,5 @@
-var buster = require("buster");
+var buster = require("buster-node");
+var assert = buster.assert;
 var parser = require("../lib/parser");
 
 buster.testCase("HTML doc parser", {

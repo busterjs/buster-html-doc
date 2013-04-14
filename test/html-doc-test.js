@@ -1,4 +1,5 @@
-var buster = require("buster");
+var buster = require("buster-node");
+var assert = buster.assert;
 var htmlDoc = require("../lib/html-doc");
 var vm = require("vm");
 var jsdom = require("jsdom").jsdom;

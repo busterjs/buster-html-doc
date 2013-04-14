@@ -1,4 +1,5 @@
-var buster = require("buster");
+var buster = require("buster-node");
+var assert = buster.assert;
 var ext = require("../lib/extension");
 var bc = require("buster-configuration");
 
