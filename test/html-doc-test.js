@@ -38,6 +38,16 @@ buster.testCase("HTML doc", {
         assert.equals(this.context.element.childNodes.length, 3);
     },
 
+    "converts windows multi-line markup in comment to DOM element":
+        function () {
+            var comment =
+                "/*:DOC element = <div>\r\n    <p>Element</p>\n</div>*/";
+            vm.runInNewContext(htmlDoc.extract(comment), this.context);
+
+            assert.tagName(this.context.element, "div");
+            assert.equals(this.context.element.childNodes.length, 3);
+        },
+
     "maintaines line-count of html doc comment": function () {
         var comment = "/*:DOC element = <div>\n    <p>Element</p>\n</div>*/";
         var processed = htmlDoc.extract(comment);
