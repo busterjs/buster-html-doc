@@ -28,7 +28,7 @@
         "zeparser": ">=0.0.5"
     },
     "devDependencies": {
-        "buster-node": "0.1",
+        "buster-node": "*",
         "jsdom": "~0.5.3",
         "buster-configuration": ">=0.6.0"
     }
