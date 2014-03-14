@@ -22,7 +22,8 @@
         "url": "https://github.com/busterjs/buster-html-doc.git"
     },
     "scripts": {
-        "test": "node run-tests.js"
+        "test": "node run-tests.js",
+        "test-debug": "node --debug-brk run-tests.js"
     },
     "dependencies": {
         "zeparser": ">=0.0.5"
