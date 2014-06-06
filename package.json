@@ -30,7 +30,7 @@
     },
     "devDependencies": {
         "buster-node": "*",
-        "jsdom": "~0.5.3",
+        "jsdom": "~0.10",
         "buster-configuration": ">=0.6.0"
     }
 }
