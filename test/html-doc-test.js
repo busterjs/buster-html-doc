@@ -6,10 +6,11 @@ var jsdom = require("jsdom").jsdom;
 
 
 buster.testCase("HTML doc", {
-    setUp: function () {
-        var dom = jsdom("<!DOCTYPE html><html><head></head>" +
-                        "<body></body></html>");
-        this.context = { document: dom.createWindow().document };
+    setUp: function (done) {
+        jsdom.env("<!DOCTYPE html><html><head></head><body></body></html>", function (err, win) {
+            this.context = { document: win.document };
+            done();
+        }.bind(this));
     },
 
     "leaves regular multi-line comment as is": function () {
@@ -77,8 +78,7 @@ buster.testCase("HTML doc", {
             vm.runInNewContext(htmlDoc.extract(comment), this.context);
             throw new Error("Did not throw");
         } catch (e) {
-            assert.equals(e.message, "HTML doc expected to only contain one " +
-                          "root node, found 2");
+            assert.match(e.message, "HTML doc expected to only contain one root node, found 2");
         }
     },
 

@@ -1,37 +1,41 @@
 {
-    "name": "buster-html-doc",
-    "version": "1.0.1",
-    "description": "HTML doc feature (as found in JsTestDriver) as a Buster.JS extension",
-    "homepage": "http://busterjs.org/docs/html-doc/",
-    "author": "Christian Johansen",
-    "contributors": [{
-        "name": "Christian Johansen",
-        "email": "christian@cjohansen.no",
-        "url": "http://cjohansen.no"
-    }, {
-        "name": "Dominykas Blyžė",
-        "email": "hello@dominykas.com",
-        "url": "http://www.dominykas.com"
-    }, {
-        "name": "Stein Magnus Jodal",
-        "email": "stein.magnus@jodal.no"
-    }],
-    "license": "BSD-3-Clause",
-    "main": "./lib/extension",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/busterjs/buster-html-doc.git"
+  "name": "buster-html-doc",
+  "version": "1.0.1",
+  "description": "HTML doc feature (as found in JsTestDriver) as a Buster.JS extension",
+  "homepage": "http://busterjs.org/docs/html-doc/",
+  "author": "Christian Johansen",
+  "contributors": [
+    {
+      "name": "Christian Johansen",
+      "email": "christian@cjohansen.no",
+      "url": "http://cjohansen.no"
     },
-    "scripts": {
-        "test": "node run-tests.js",
-        "test-debug": "node --debug-brk run-tests.js"
+    {
+      "name": "Dominykas Blyžė",
+      "email": "hello@dominykas.com",
+      "url": "http://www.dominykas.com"
     },
-    "dependencies": {
-        "zeparser": ">=0.0.5"
-    },
-    "devDependencies": {
-        "buster-node": "*",
-        "jsdom": "~0.10",
-        "buster-configuration": ">=0.6.0"
+    {
+      "name": "Stein Magnus Jodal",
+      "email": "stein.magnus@jodal.no"
     }
+  ],
+  "license": "BSD-3-Clause",
+  "main": "./lib/extension",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/busterjs/buster-html-doc.git"
+  },
+  "scripts": {
+    "test": "node run-tests.js",
+    "test-debug": "node --debug-brk run-tests.js"
+  },
+  "dependencies": {
+    "zeparser": "0.0.7"
+  },
+  "devDependencies": {
+    "buster-node": "0.7.x",
+    "jsdom": "3.x",
+    "buster-configuration": "0.7.x"
+  }
 }
