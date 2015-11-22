@@ -16,6 +16,7 @@
         "name": "Stein Magnus Jodal",
         "email": "stein.magnus@jodal.no"
     }],
+    "license": "BSD-3-Clause",
     "main": "./lib/extension",
     "repository": {
         "type": "git",
