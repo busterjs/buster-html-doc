@@ -1,6 +1,6 @@
-var buster = require("buster-node");
+var buster = require("buster");
 var assert = buster.assert;
-var ext = require("../lib/extension");
+var ext = require("../../lib/extension");
 var bc = require("buster-configuration");
 
 function process(group, then, errBack) {

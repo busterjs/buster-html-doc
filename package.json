@@ -27,15 +27,17 @@
     "url": "https://github.com/busterjs/buster-html-doc.git"
   },
   "scripts": {
-    "test": "node run-tests.js",
-    "test-debug": "node --debug-brk run-tests.js"
+    "test": "grunt test"
   },
   "dependencies": {
     "zeparser": "0.0.7"
   },
   "devDependencies": {
-    "buster-node": "0.7.x",
-    "jsdom": "3.x",
-    "buster-configuration": "0.7.x"
+    "buster": "0.7.x",
+    "buster-configuration": "0.8.x",
+    "grunt": "0.4.x",
+    "grunt-buster": "0.4.x",
+    "grunt-cli": "0.1.x",
+    "phantomjs": "1.9.x"
   }
 }

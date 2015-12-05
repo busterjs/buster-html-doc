@@ -1,6 +1,16 @@
 var config  = module.exports;
 
-config.Node = {
+config["node"] = {
     environment: "node",
-    tests: ["test/**/*.js"]
+    tests: ["test/node/*.js"]
+};
+
+config["browser"] = {
+    environment: "browser",
+    tests: [
+        "test/browser/*.js"
+    ],
+    extensions: [
+        require("./lib/extension")
+    ]
 };
