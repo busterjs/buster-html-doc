@@ -109,5 +109,15 @@ buster.testCase("HTML doc (integration)", {
         /*:DOC += <div id='test'></div> */
 
         assert.equals(document.body.firstChild.id, "test");
+    },
+
+    "converts a lonely htmldoc inside setUp": {
+        "setUp": function () {
+            /*:DOC += <div id='inside-setup'></div> */
+        },
+
+        "test": function () {
+            assert.equals(document.body.firstChild.id, "inside-setup");
+        }
     }
 });

@@ -18,7 +18,7 @@ buster.testCase("HTML doc extension", {
         var group = this.config.addGroup("Some tests", {
             resources: [{
                 path: "/buster.js",
-                content: "function () { /*:DOC el = <p></p>*/ }"
+                content: "function tmp() { /*:DOC el = <p></p>*/ }"
             }],
             tests: ["/buster.js"]
         });
