@@ -1,6 +1,6 @@
 {
   "name": "buster-html-doc",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "HTML doc feature (as found in JsTestDriver) as a Buster.JS extension",
   "homepage": "http://busterjs.org/docs/html-doc/",
   "author": "Christian Johansen",
