@@ -29,6 +29,9 @@
   "scripts": {
     "test": "grunt test"
   },
+  "engines": {
+    "node": ">= 4"
+  },
   "dependencies": {
     "babel-generator": "6.x",
     "babel-template": "6.x",
