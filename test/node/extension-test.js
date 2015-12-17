@@ -1,6 +1,6 @@
-var buster = require("buster-node");
+var buster = require("buster");
 var assert = buster.assert;
-var ext = require("../lib/extension");
+var ext = require("../../lib/extension");
 var bc = require("buster-configuration");
 
 function process(group, then, errBack) {
@@ -18,7 +18,7 @@ buster.testCase("HTML doc extension", {
         var group = this.config.addGroup("Some tests", {
             resources: [{
                 path: "/buster.js",
-                content: "function () { /*:DOC el = <p></p>*/ }"
+                content: "function tmp() { /*:DOC el = <p></p>*/ }"
             }],
             tests: ["/buster.js"]
         });
